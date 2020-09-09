@@ -15,8 +15,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
   s.bind((HOST, PORT))
   s.listen()
   while True:
-    conn, addr = s.accept()
     print('Esperando conexão...')
+    conn, addr = s.accept()
     with conn:
         print('Recebendo conexão')
         while True:
